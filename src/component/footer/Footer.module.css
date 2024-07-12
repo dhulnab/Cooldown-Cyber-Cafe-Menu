@@ -1,0 +1,17 @@
+.footer {
+  padding-bottom: 80px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .head2 {
+  font-size: 15.8px;
+  color: #ccc;
+}
+.footer .head3 {
+  font-size: 10.4px;
+  margin-top: -10px;
+  color: #ccc;
+}

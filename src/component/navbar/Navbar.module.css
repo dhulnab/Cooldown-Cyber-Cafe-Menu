@@ -1,0 +1,34 @@
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  overflow-y: scroll;
+  margin-block: 12px;
+  padding-inline-start: 14px;
+}
+.nav::-webkit-scrollbar {
+  display: none;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 8px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  padding: 6px;
+  background-color: #39396b;
+  border-radius: 6px;
+}
+.item p {
+  font-size: 14px;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+.active {
+  border: 1px solid #a247dc;
+  border-radius: 6px;
+}

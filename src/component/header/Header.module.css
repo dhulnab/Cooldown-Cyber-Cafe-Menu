@@ -1,0 +1,44 @@
+.header {
+  background-color: #151528;
+  color: #fff;
+  position: fixed;
+  bottom: -2px;
+  left: -1px;
+  right: -1px;
+  z-index: 999;
+  border-top: 0.5px solid #ccc;
+}
+
+.content {
+  padding: 12px 0;
+}
+.content ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+.content ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+}
+.content ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content ul li {
+  font-size: 18px !important;
+}
+.content ul li p {
+  font-size: 14px !important;
+  margin-right: 6px;
+}
+.active {
+  background-color: #39396b;
+  border-radius: 8px;
+  padding: 3px 6px;
+}
