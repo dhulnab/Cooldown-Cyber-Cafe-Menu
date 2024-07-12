@@ -1,6 +1,6 @@
-import Header from "@/component/header/header";
+import Header from "@/component/header/Header.jsx";
 import "./globals.css";
-import Footer from "@/component/footer/Footer";
+import Footer from "@/component/footer/Footer.jsx";
 
 export const metadata = {
   title: "Create Next App",
