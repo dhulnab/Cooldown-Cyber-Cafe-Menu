@@ -1,5 +1,5 @@
 .headline {
-  margin-top: 8px;
+  margin-top: 16px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -13,7 +13,26 @@
   justify-content: center;
   margin-left: 10px;
 }
+.headline img {
+  width: 45px;
+  height: 45px;
+  margin-right: -5px;
+}
 .headline p {
   color: #fff;
   margin-right: 10px;
+  font-size: 20px;
+}
+@media only screen and (max-width: 430px) {
+  .headline {
+    margin-top: 8px;
+  }
+  .headline p {
+    font-size: 16px;
+  }
+  .headline img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0px;
+  }
 }

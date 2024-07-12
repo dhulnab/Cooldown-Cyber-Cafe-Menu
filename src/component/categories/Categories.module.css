@@ -10,10 +10,10 @@
   color: #fff;
 }
 .grid a:focus {
-background-color: #39396b;
-border-radius: 8px;
+  background-color: #39396b;
+  border-radius: 8px;
 }
-.menu{
+.menu {
   color: #ccc;
   margin-bottom: 6px;
   direction: rtl;
@@ -26,7 +26,12 @@ border-radius: 8px;
   flex-direction: column;
   border-radius: 8px;
   padding: 10px;
-  font-size: 12px;
+  font-size: 16px;
+}
+
+.item img {
+  transform: scale(1.3);
+  margin-bottom: 3px;
 }
 .item span {
   font-size: 45px;
@@ -36,4 +41,13 @@ border-radius: 8px;
 
 .item p {
   margin-top: 8px;
+}
+@media only screen and (max-width: 430px) {
+  .item {
+    font-size: 12px;
+  }
+  .item img {
+    transform: scale(1);
+    margin-bottom: 0px;
+  }
 }
