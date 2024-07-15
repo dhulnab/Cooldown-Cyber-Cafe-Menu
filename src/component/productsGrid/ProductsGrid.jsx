@@ -7,7 +7,6 @@ import { LoadingOutlined } from "@ant-design/icons";
 import { Spin } from "antd";
 
 function ProductsGrid({ productName }) {
-  const [product, setProduct] = useState(productName);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -15,7 +14,7 @@ function ProductsGrid({ productName }) {
     async function fetchData() {
       try {
         const response = await fetch(
-          `http://localhost:3000/products/${product}/api`
+          `${process.env.NEXT_PUBLIC_BASE_URL}/${productName}/api`
         );
         const data = await response.json();
         setItems(data);
@@ -23,16 +22,20 @@ function ProductsGrid({ productName }) {
         console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
-        console.log(items);
       }
     }
+
     fetchData();
-  }, [product]);
+  }, [productName]);
 
   if (loading) {
     return (
       <div className="loading">
-        <Spin indicator={<LoadingOutlined spin />} size="large" style={{ color: "#a247dc" }}/>
+        <Spin
+          indicator={<LoadingOutlined spin />}
+          size="large"
+          style={{ color: "#a247dc" }}
+        />
       </div>
     );
   }
@@ -40,10 +43,15 @@ function ProductsGrid({ productName }) {
   return (
     <Container>
       <div className={styles.grid}>
-        {items.map((item, index) => (
-          <div className={styles.item} key={index}>
+        {items.map((item) => (
+          <div className={styles.item} key={item.id}>
             <div className={styles.imgBox}>
-              <Image src={item.img} alt="product" fill className={styles.img} />
+              <Image
+                src={item.img}
+                alt={item.name}
+                fill
+                className={styles.img}
+              />
             </div>
             <div className={styles.content}>
               <p className={styles.name}>{item.name}</p>
