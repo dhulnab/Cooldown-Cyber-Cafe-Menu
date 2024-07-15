@@ -19,3 +19,29 @@
 .slick-dots li {
   margin: 0 5px;
 }
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+}
+.ant-rate-star-first,
+.ant-rate-star-second {
+  color: #39396b !important;
+}
+
+.ant-rate-star-full .ant-rate-star-first,
+.ant-rate-star-full .ant-rate-star-second,
+.ant-rate-star-half .ant-rate-star-first,
+.ant-rate-star-half .ant-rate-star-second {
+  color: #a247dc !important;
+}
+
+@media only screen and (max-width: 430px) {
+  .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
+  }
+}

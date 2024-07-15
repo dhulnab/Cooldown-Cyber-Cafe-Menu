@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "img": "/product1.jpg",
+      "name": "جوكلت فرابتشينو",
+      "price": "9,000",
+      "category": "drinks"
+    },
+    {
+      "img": "/product2.jpg",
+      "name": "ايس اميركانو",
+      "price": "7,000",
+      "category": "drinks"
+    },
+    {
+      "img": "/product3.jpg",
+      "name": "جاك سبارو يوكرت",
+      "price": "6,000",
+      "category": "drinks"
+    },
+    {
+      "img": "/product1.jpg",
+      "name": "جوكلت فرابتشينو",
+      "price": "9,000",
+      "category": "milkshake"
+    },
+    {
+      "img": "/product2.jpg",
+      "name": "ايس اميركانو",
+      "price": "7,000",
+      "category": "milkshake"
+    },
+    {
+      "img": "/product3.jpg",
+      "name": "جاك سبارو يوكرت",
+      "price": "6,000",
+      "category": "smoothies"
+    },
+    {
+      "img": "/product1.jpg",
+      "name": "جوكلت فرابتشينو",
+      "price": "9,000",
+      "category": "smoothies"
+    },
+    {
+      "img": "/product2.jpg",
+      "name": "ايس اميركانو",
+      "price": "7,000",
+      "category": "smoothies"
+    },
+    {
+      "img": "/product3.jpg",
+      "name": "جاك سبارو يوكرت",
+      "price": "6,000",
+      "category": "hotdrinks"
+    },
+    {
+      "img": "/product4.jpg",
+      "name": "كولداون شيك",
+      "price": "10,000",
+      "category": "hotdrinks"
+    },
+    {
+      "img": "/gaming.jpeg",
+      "name": "PC 3H",
+      "price": "10,000",
+      "category": "gaming"
+    },
+    {
+      "img": "/gaming.jpeg",
+      "name": "PC 2H",
+      "price": "6,000",
+      "category": "gaming"
+    },
+    {
+      "img": "/gaming.jpeg",
+      "name": "PC 1H",
+      "price": "3,000",
+      "category": "gaming"
+    },
+    {
+      "img": "/gaming.jpeg",
+      "name": "PC 30M",
+      "price": "1,500",
+      "category": "gaming"
+    }
+  ]
+}
