@@ -1,28 +1,24 @@
 import Container from "@/component/container/Container";
 import styles from "./page.module.css";
 import Image from "next/image";
-import ProductsGrid from "@/component/productsGrid/ProductsGrid";
+import Categories from "@/component/categories/Categories";
+import Banner from "@/component/banner/Banner";
 
-export const metadata = {
-  title: "Gaming",
-  description: "",
-};
-const Gaming = () => {
+export default function Home() {
   return (
-    <main>
+    <div className={styles.main}>
       <Container>
         <div className={styles.logo}>
           <Image src="/logo.png" alt="logo" width={100} height={100} />
           <p>
             <span>COOLDOWN</span>
             <br />
-            گيمنگ
+            مرحباً بك
           </p>
         </div>
+        <Banner/>
+        <Categories />
       </Container>
-      <ProductsGrid productName={"gaming"} />
-    </main>
+    </div>
   );
-};
-
-export default Gaming;
+}

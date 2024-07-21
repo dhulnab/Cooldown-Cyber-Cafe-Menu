@@ -1,8 +1,8 @@
 import Container from "@/component/container/Container";
 import styles from "./page.module.css";
 import Image from "next/image";
-import about1 from "../../../public/about1.jpg";
-import about2 from "../../../public/about2.jpg";
+import about1 from "../../../../public/about1.jpg";
+import about2 from "../../../../public/about2.jpg";
 export const metadata = {
     title: "About Us",
     description: "",

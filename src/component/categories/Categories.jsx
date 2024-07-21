@@ -11,6 +11,8 @@ import milkshake from "../../../public/milkshake.svg";
 import smoothie from "../../../public/smoothie.svg";
 import drink from "../../../public/drink.svg";
 import mojito from "../../../public/mojito.svg";
+import cooldownMojito from "../../../public/cooldownMojito.svg";
+import yogurt from "../../../public/yogurt.svg";
 import icedrink from "../../../public/ice-drink.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,7 +26,7 @@ function Categories() {
         <p className={styles.menu}>المنيو:</p>
         <div className={styles.grid}>
           <Link
-            href={`/products/drinks`}
+            href={`/main/products/drinks`}
             onClick={() => setArPageName("العصائر الطبيعية")}
           >
             <div className={styles.item}>
@@ -35,7 +37,7 @@ function Categories() {
             </div>
           </Link>
           <Link
-            href={`/products/hotdrinks`}
+            href={`/main/products/hotdrinks`}
             onClick={() => setArPageName("المشروبات الساخنة")}
           >
             <div className={styles.item}>
@@ -47,7 +49,7 @@ function Categories() {
           </Link>
 
           <Link
-            href={`/products/mojito`}
+            href={`/main/products/mojito`}
             onClick={() => setArPageName("كلاسك موهيتو")}
           >
             <div className={styles.item}>
@@ -58,7 +60,23 @@ function Categories() {
             </div>
           </Link>
           <Link
-            href={`/products/smoothies`}
+            href={`/main/products/cooldownMojito`}
+            onClick={() => setArPageName("كولداون موهيتو")}
+          >
+            <div className={styles.item}>
+              <span>
+                <Image
+                  src={cooldownMojito}
+                  alt="coffee"
+                  width={45}
+                  height={45}
+                />
+              </span>
+              <p>كولداون موهيتو</p>
+            </div>
+          </Link>
+          <Link
+            href={`/main/products/smoothies`}
             onClick={() => setArPageName("السموذيات")}
           >
             <div className={styles.item}>
@@ -70,7 +88,7 @@ function Categories() {
           </Link>
 
           <Link
-            href={`/products/icedrinks`}
+            href={`/main/products/icedrinks`}
             onClick={() => setArPageName("المشروبات الباردة")}
           >
             <div className={styles.item}>
@@ -82,7 +100,7 @@ function Categories() {
           </Link>
 
           <Link
-            href={`/products/milkshake`}
+            href={`/main/products/milkshake`}
             onClick={() => setArPageName("ميلك شيك")}
           >
             <div className={styles.item}>
@@ -92,9 +110,20 @@ function Categories() {
               <p>ميلك شيك</p>
             </div>
           </Link>
+          <Link
+            href={`/main/products/yogurtShake`}
+            onClick={() => setArPageName("يوكرت شيك")}
+          >
+            <div className={styles.item}>
+              <span>
+                <Image src={yogurt} alt="coffee" width={40} height={40} />
+              </span>
+              <p>يوكرت شيك</p>
+            </div>
+          </Link>
 
           <Link
-            href={`/products/icecoffee`}
+            href={`/main/products/icecoffee`}
             onClick={() => setArPageName("القهوة المثلجة")}
           >
             <div className={styles.item}>
@@ -106,7 +135,7 @@ function Categories() {
           </Link>
 
           <Link
-            href={`/products/fraptchino`}
+            href={`/main/products/fraptchino`}
             onClick={() => setArPageName("فرابتشينو")}
           >
             <div className={styles.item}>
@@ -118,7 +147,7 @@ function Categories() {
           </Link>
 
           <Link
-            href={`/products/pastries`}
+            href={`/main/products/pastries`}
             onClick={() => setArPageName("المعجنات")}
           >
             <div className={styles.item}>
@@ -129,7 +158,7 @@ function Categories() {
             </div>
           </Link>
           <Link
-            href={`/products/hookah`}
+            href={`/main/products/hookah`}
             onClick={() => setArPageName("الاراكيل")}
           >
             <div className={styles.item}>

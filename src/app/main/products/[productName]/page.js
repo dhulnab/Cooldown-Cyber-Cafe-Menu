@@ -8,10 +8,10 @@ export const metadata = {
 };
 export default function Products({ params }) {
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <ProductsHeader />
       <Navbar />
       <ProductsGrid productName={params.productName} />
-    </main>
+    </div>
   );
 }

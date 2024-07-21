@@ -15,7 +15,18 @@
   display: flex;
   justify-content: center;
 }
-
+.loadingImgBox {
+  width: 46%;
+  transform: scale(0.75);
+  margin-bottom: 14px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+.loadingModel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .slick-dots li {
   margin: 0 5px;
 }

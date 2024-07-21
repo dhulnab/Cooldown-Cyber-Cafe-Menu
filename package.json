@@ -6,14 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
+  "engines": {
+    "node": "18.18.2"
   },
   "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "@uploadcare/nextjs-loader": "^1.0.0",
+    "@uploadcare/upload-client": "^6.14.1",
     "antd": "^5.19.1",
     "axios": "^1.7.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "next": "14.2.4",
+    "prisma": "^5.17.0",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.4",

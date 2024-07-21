@@ -12,7 +12,7 @@ function ProductsHeader() {
   const { arPageName } = useGlobalStates();
   useEffect(() => {
     arPageName === "" || arPageName === undefined || arPageName === null
-      ? redirect("/")
+      ? redirect("/main")
       : null;
   }, [arPageName]);
   return (

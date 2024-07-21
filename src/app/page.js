@@ -1,24 +1,44 @@
-import Container from "@/component/container/Container";
-import styles from "./page.module.css";
+"use client";
 import Image from "next/image";
-import Categories from "@/component/categories/Categories";
-import Banner from "@/component/banner/Banner";
+import React, { useEffect } from "react";
+import { Spin } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
+import "./globals.css";
 
-export default function Home() {
+export default function Loading() {
+  useEffect(() => {
+    setTimeout(() => {
+      window.location.href = "/main";
+    }, 3000);
+  }, []);
   return (
-    <main className={styles.main}>
-      <Container>
-        <div className={styles.logo}>
-          <Image src="/logo.png" alt="logo" width={100} height={100} />
-          <p>
-            <span>COOLDOWN</span>
-            <br />
-            مرحباً بك
-          </p>
-        </div>
-        <Banner/>
-        <Categories />
-      </Container>
-    </main>
+    <div
+      style={{
+        minHeight: "95vh",
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: "#151528",
+        width: "100%",
+      }}
+    >
+      <div className="loadingImgBox">
+        <Image
+          priority
+          src="/logo.png"
+          alt="loading"
+          width={170}
+          height={170}
+        />
+      </div>
+      <div className="loadingModel">
+        <Spin
+          indicator={<LoadingOutlined spin />}
+          size="large"
+          style={{ color: "#a247dc" }}
+        />
+      </div>
+    </div>
   );
 }

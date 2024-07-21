@@ -6,7 +6,7 @@ import Container from "@/component/container/Container";
 import { Rate, Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 import axios from "axios";
-import er from "../../../public/error.svg";
+import er from "../../../../public/error.svg";
 import Head from "next/head";
 
 const ContactUs = () => {

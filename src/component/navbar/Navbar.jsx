@@ -10,6 +10,8 @@ import milkshake from "../../../public/milkshake.svg";
 import smoothie from "../../../public/smoothie.svg";
 import drink from "../../../public/drink.svg";
 import mojito from "../../../public/mojito.svg";
+import cooldownMojito from "../../../public/cooldownMojito.svg";
+import yogurt from "../../../public/yogurt.svg";
 import icedrink from "../../../public/ice-drink.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +22,7 @@ function Navbar() {
   return (
     <div className={styles.nav}>
       <Link
-        href={`/products/drinks`}
+        href={`/main/products/drinks`}
         className={arPageName === "العصائر الطبيعية" ? styles.active : null}
         onClick={() => setArPageName("العصائر الطبيعية")}
       >
@@ -30,7 +32,7 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/hotdrinks`}
+        href={`/main/products/hotdrinks`}
         className={arPageName === "المشروبات الساخنة" ? styles.active : null}
         onClick={() => setArPageName("المشروبات الساخنة")}
       >
@@ -40,7 +42,7 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/mojito`}
+        href={`/main/products/mojito`}
         className={arPageName === "كلاسك موهيتو" ? styles.active : null}
         onClick={() => setArPageName("كلاسك موهيتو")}
       >
@@ -50,7 +52,17 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/smoothies`}
+        href={`/main/products/cooldownMojito`}
+        className={arPageName === "كولداون موهيتو" ? styles.active : null}
+        onClick={() => setArPageName("كولداون موهيتو")}
+      >
+        <div className={styles.item}>
+          <Image src={cooldownMojito} alt="coffee" width={19} height={19} />
+          <p>كولداون موهيتو</p>
+        </div>
+      </Link>
+      <Link
+        href={`/main/products/smoothies`}
         className={arPageName === "السموذيات" ? styles.active : null}
         onClick={() => setArPageName("السموذيات")}
       >
@@ -60,7 +72,7 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/icedrinks`}
+        href={`/main/products/icedrinks`}
         className={arPageName === "المشروبات الباردة" ? styles.active : null}
         onClick={() => setArPageName("المشروبات الباردة")}
       >
@@ -70,7 +82,7 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/milkshake`}
+        href={`/main/products/milkshake`}
         className={arPageName === "ميلك شيك" ? styles.active : null}
         onClick={() => setArPageName("ميلك شيك")}
       >
@@ -80,7 +92,17 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/icecoffee`}
+        href={`/main/products/yogurtShake`}
+        className={arPageName === "يوكرت شيك" ? styles.active : null}
+        onClick={() => setArPageName("يوكرت شيك")}
+      >
+        <div className={styles.item}>
+          <Image src={yogurt} alt="coffee" width={19} height={19} />
+          <p>يوكرت شيك</p>
+        </div>
+      </Link>
+      <Link
+        href={`/main/products/icecoffee`}
         className={arPageName === "القهوة المثلجة" ? styles.active : null}
         onClick={() => setArPageName("القهوة المثلجة")}
       >
@@ -90,7 +112,7 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/fraptchino`}
+        href={`/main/products/fraptchino`}
         className={arPageName === "فرابتشينو" ? styles.active : null}
         onClick={() => setArPageName("فرابتشينو")}
       >
@@ -100,7 +122,7 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/pastries`}
+        href={`/main/products/pastries`}
         className={arPageName === "المعجنات" ? styles.active : null}
         onClick={() => setArPageName("المعجنات")}
       >
@@ -110,7 +132,7 @@ function Navbar() {
         </div>
       </Link>
       <Link
-        href={`/products/hookah`}
+        href={`/main/products/hookah`}
         className={arPageName === "الاراكيل" ? styles.active : null}
         onClick={() => setArPageName("الاراكيل")}
       >

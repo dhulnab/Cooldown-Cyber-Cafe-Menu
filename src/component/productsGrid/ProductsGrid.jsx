@@ -5,6 +5,7 @@ import Container from "../container/Container";
 import Image from "next/image";
 import { LoadingOutlined } from "@ant-design/icons";
 import { Spin } from "antd";
+import UploadcareImage from "@uploadcare/nextjs-loader";
 
 function ProductsGrid({ productName }) {
   const [items, setItems] = useState([]);
@@ -46,16 +47,16 @@ function ProductsGrid({ productName }) {
         {items.map((item) => (
           <div className={styles.item} key={item.id}>
             <div className={styles.imgBox}>
-              <Image
-                src={item.img}
-                alt={item.name}
+              <UploadcareImage
+                src={item.productImg}
+                alt={item.productName}
                 fill
                 className={styles.img}
               />
             </div>
             <div className={styles.content}>
-              <p className={styles.name}>{item.name}</p>
-              <p className={styles.price}>{item.price} IQD</p>
+              <p className={styles.name}>{item.productName}</p>
+              <p className={styles.price}>{item.productPrice} IQD</p>
             </div>
           </div>
         ))}

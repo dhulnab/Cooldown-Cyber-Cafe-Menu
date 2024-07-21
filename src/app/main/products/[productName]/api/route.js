@@ -1,10 +1,11 @@
-import itemsData from "@/app/testData.json";
+import { PrismaClient } from "@prisma/client";
 
-export const dynamic = "force-dynamic";
+const db = new PrismaClient();
+
 export async function GET(_request, { params }) {
-  const items = itemsData.items.filter(
-    (item) => item.category === params.productName
-  );
+  const items = await db.product.findMany({
+    where: { productCategory: params.productName },
+  });
 
   const headers = new Headers({
     "Access-Control-Allow-Origin": "*",

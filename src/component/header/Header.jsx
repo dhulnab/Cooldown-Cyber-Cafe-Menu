@@ -17,27 +17,27 @@ function Header() {
       <Container>
         <div className={styles.content}>
           <ul>
-            <Link href="/" onClick={() => setPage("Home")}>
+            <Link href="/main" onClick={() => setPage("Home")}>
               <li className={page === "Home" ? styles.active : null}>
                 <p>الرئيسية</p>
                 <Image src={menu} alt="menu" width={28} height={28} />
               </li>
             </Link>
-            <Link href="/gaming" onClick={() => setPage("Gaming")}>
+            <Link href="/main/gaming" onClick={() => setPage("Gaming")}>
               <li className={page === "Gaming" ? styles.active : null}>
                 <p>گيمنگ</p>
                 <Image src={game} alt="menu" width={20} height={20} />
               </li>
             </Link>
 
-            <Link href="aboutus" onClick={() => setPage("About")}>
+            <Link href="/main/aboutus" onClick={() => setPage("About")}>
               <li className={page === "About" ? styles.active : null}>
                 <p>من نحن</p>
                 <Image src={about} alt="menu" width={19} height={19} />
               </li>
             </Link>
 
-            <Link href="/rating" onClick={() => setPage("Rating")}>
+            <Link href="/main/rating" onClick={() => setPage("Rating")}>
               <li className={page === "Rating" ? styles.active : null}>
                 <p>التقيم</p>
                 <Image src={rating} alt="menu" width={18.5} height={18.5} />
