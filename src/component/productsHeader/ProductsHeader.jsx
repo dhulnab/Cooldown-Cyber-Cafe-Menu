@@ -18,7 +18,7 @@ function ProductsHeader() {
   return (
     <Container>
       <div className={styles.headline}>
-        <Link href="/">
+        <Link href="/main">
           <Image src={arrow} alt="right" width={30} height={30} />
         </Link>
         <p>{arPageName}</p>
