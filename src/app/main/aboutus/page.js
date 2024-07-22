@@ -3,15 +3,17 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import about1 from "../../../../public/about1.jpg";
 import about2 from "../../../../public/about2.jpg";
+import PageNameRedetection from "@/component/PageNameRedetection";
 export const metadata = {
-    title: "About Us",
-    description: "",
-  };
+  title: "About Us",
+  description: "",
+};
 const AboutUs = () => {
   return (
     <Container>
+      <PageNameRedetection />
       <div className={styles.logo}>
-        <Image src="/logo.png" alt="logo" width={100} height={100} />
+        <Image priority src="/logo.png" alt="logo" width={100} height={100} />
         <p>
           <span>COOLDOWN</span>
           <br />
@@ -26,7 +28,7 @@ const AboutUs = () => {
           أحدث ألعاب الفيديو، والأجواء الودية، والمشروبات اللذيذة.
         </p>
         <div className={styles.img1}>
-          <Image src={about1} alt="about" fill />
+          <Image priority src={about1} alt="about" fill />
         </div>
         <h2>رؤيتنا</h2>
         <p>
@@ -48,7 +50,7 @@ const AboutUs = () => {
           تجربة لعب ممتعة وسلسة.
         </p>
         <div className={styles.img2}>
-          <Image src={about2} alt="about" fill />
+          <Image priority src={about2} alt="about" fill />
         </div>
 
         <h3>2. بيئة مريحة وممتعة</h3>

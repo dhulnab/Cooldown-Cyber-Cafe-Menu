@@ -15,7 +15,7 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #39396b;
   overflow: hidden;
   margin-bottom: 12px;
@@ -41,7 +41,6 @@
   color: #fff;
   border-radius: 8px;
   padding: 2px 12px;
-  /* background-color: #a247dc; */
 }
 .name {
   padding-right: 8px;
@@ -54,9 +53,15 @@
   .item {
     font-size: 16px;
   }
+  .item .name {
+    margin-right: 8px;
+  }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 575px) {
   .item {
     font-size: 16px;
+  }
+  .name {
+    padding-right: 0px;
   }
 }

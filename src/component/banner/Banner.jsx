@@ -32,6 +32,7 @@ const Banner = () => {
               src={offer.productImg}
               alt={offer.productName}
               fill
+              priority
               className={styles.slide}
             />
           </div>

@@ -19,7 +19,7 @@ function ProductsHeader() {
     <Container>
       <div className={styles.headline}>
         <Link href="/main">
-          <Image src={arrow} alt="right" width={30} height={30} />
+          <Image priority src={arrow} alt="right" width={30} height={30} />
         </Link>
         <p>{arPageName}</p>
       </div>

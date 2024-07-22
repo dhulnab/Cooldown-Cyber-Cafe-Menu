@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ProductsGrid.module.css";
 import Container from "../container/Container";
-import Image from "next/image";
 import { LoadingOutlined } from "@ant-design/icons";
 import { Spin } from "antd";
 import UploadcareImage from "@uploadcare/nextjs-loader";
@@ -52,6 +51,7 @@ function ProductsGrid({ productName }) {
                 alt={item.productName}
                 fill
                 className={styles.img}
+                priority
               />
             </div>
             <div className={styles.content}>

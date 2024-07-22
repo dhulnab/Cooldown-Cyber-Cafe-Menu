@@ -9,8 +9,6 @@ export const metadata = {
 export default function Products({ params }) {
   return (
     <div className={styles.main}>
-      <ProductsHeader />
-      <Navbar />
       <ProductsGrid productName={params.productName} />
     </div>
   );

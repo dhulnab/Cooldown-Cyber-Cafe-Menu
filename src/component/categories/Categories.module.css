@@ -27,6 +27,7 @@
   border-radius: 8px;
   padding: 10px;
   font-size: 16px;
+  min-height: 160px;
 }
 
 .item img {
@@ -42,9 +43,10 @@
 .item p {
   margin-top: 8px;
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 570px) {
   .item {
     font-size: 12px;
+    min-height: 100px;
   }
   .item img {
     transform: scale(1);
