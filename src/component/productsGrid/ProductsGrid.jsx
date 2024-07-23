@@ -1,44 +1,27 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./ProductsGrid.module.css";
 import Container from "../container/Container";
-import { LoadingOutlined } from "@ant-design/icons";
-import { Spin } from "antd";
-import UploadcareImage from "@uploadcare/nextjs-loader";
+import Image from "next/image";
 
-function ProductsGrid({ productName }) {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BASE_URL}/${productName}/api`
-        );
-        const data = await response.json();
-        setItems(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchData();
-  }, [productName]);
-
-  if (loading) {
-    return (
-      <div className="loading">
-        <Spin
-          indicator={<LoadingOutlined spin />}
-          size="large"
-          style={{ color: "#a247dc" }}
-        />
-      </div>
+const fetchProducts = async (productName) => {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/${productName}/api`,
+      { next: { revalidate: 1 } }
     );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return [];
   }
+};
+
+const ProductsGrid = async ({ productName }) => {
+  const items = await fetchProducts(productName);
 
   return (
     <Container>
@@ -46,12 +29,13 @@ function ProductsGrid({ productName }) {
         {items.map((item) => (
           <div className={styles.item} key={item.id}>
             <div className={styles.imgBox}>
-              <UploadcareImage
-                src={item.productImg}
+              <Image
+                src={`${item.productImg}image.jpg`}
                 alt={item.productName}
                 fill
                 className={styles.img}
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className={styles.content}>
@@ -63,6 +47,6 @@ function ProductsGrid({ productName }) {
       </div>
     </Container>
   );
-}
+};
 
 export default ProductsGrid;

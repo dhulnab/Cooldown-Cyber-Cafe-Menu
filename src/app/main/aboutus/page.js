@@ -13,7 +13,14 @@ const AboutUs = () => {
     <Container>
       <PageNameRedetection />
       <div className={styles.logo}>
-        <Image priority src="/logo.png" alt="logo" width={100} height={100} />
+        <Image
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+          src="/logo.png"
+          alt="logo"
+          width={100}
+          height={100}
+        />
         <p>
           <span>COOLDOWN</span>
           <br />
@@ -28,7 +35,13 @@ const AboutUs = () => {
           أحدث ألعاب الفيديو، والأجواء الودية، والمشروبات اللذيذة.
         </p>
         <div className={styles.img1}>
-          <Image priority src={about1} alt="about" fill />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={about1}
+            alt="about"
+            fill
+          />
         </div>
         <h2>رؤيتنا</h2>
         <p>
@@ -50,7 +63,13 @@ const AboutUs = () => {
           تجربة لعب ممتعة وسلسة.
         </p>
         <div className={styles.img2}>
-          <Image priority src={about2} alt="about" fill />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={about2}
+            alt="about"
+            fill
+          />
         </div>
 
         <h3>2. بيئة مريحة وممتعة</h3>

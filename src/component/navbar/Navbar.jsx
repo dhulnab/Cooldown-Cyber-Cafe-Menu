@@ -27,7 +27,14 @@ function Navbar() {
         onClick={() => setArPageName("العصائر الطبيعية")}
       >
         <div className={styles.item}>
-          <Image priority src={drink} alt="coffee" width={23} height={23} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={drink}
+            alt="coffee"
+            width={23}
+            height={23}
+          />
           <p style={{ marginRight: "0px" }}>العصائر الطبيعية</p>
         </div>
       </Link>
@@ -37,7 +44,14 @@ function Navbar() {
         onClick={() => setArPageName("المشروبات الساخنة")}
       >
         <div className={styles.item}>
-          <Image priority src={FiCoffee} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={FiCoffee}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>المشروبات الساخنة</p>
         </div>
       </Link>
@@ -47,7 +61,14 @@ function Navbar() {
         onClick={() => setArPageName("كلاسك موهيتو")}
       >
         <div className={styles.item}>
-          <Image priority src={mojito} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={mojito}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>كلاسك موهيتو</p>
         </div>
       </Link>
@@ -57,7 +78,14 @@ function Navbar() {
         onClick={() => setArPageName("كولداون موهيتو")}
       >
         <div className={styles.item}>
-          <Image priority src={cooldownMojito} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={cooldownMojito}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>كولداون موهيتو</p>
         </div>
       </Link>
@@ -67,7 +95,14 @@ function Navbar() {
         onClick={() => setArPageName("السموذيات")}
       >
         <div className={styles.item}>
-          <Image priority src={smoothie} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={smoothie}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>السموذيات</p>
         </div>
       </Link>
@@ -77,7 +112,14 @@ function Navbar() {
         onClick={() => setArPageName("المشروبات الباردة")}
       >
         <div className={styles.item}>
-          <Image priority src={icedrink} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={icedrink}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>المشروبات الباردة</p>
         </div>
       </Link>
@@ -87,7 +129,14 @@ function Navbar() {
         onClick={() => setArPageName("ميلك شيك")}
       >
         <div className={styles.item}>
-          <Image priority src={milkshake} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={milkshake}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>ميلك شيك</p>
         </div>
       </Link>
@@ -97,7 +146,14 @@ function Navbar() {
         onClick={() => setArPageName("يوكرت شيك")}
       >
         <div className={styles.item}>
-          <Image priority src={yogurt} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={yogurt}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>يوكرت شيك</p>
         </div>
       </Link>
@@ -107,7 +163,14 @@ function Navbar() {
         onClick={() => setArPageName("القهوة المثلجة")}
       >
         <div className={styles.item}>
-          <Image priority src={iceCoffee} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={iceCoffee}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>القهوة المثلجة</p>
         </div>
       </Link>
@@ -117,7 +180,14 @@ function Navbar() {
         onClick={() => setArPageName("فرابتشينو")}
       >
         <div className={styles.item}>
-          <Image priority src={fraptchino} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={fraptchino}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>فرابتشينو</p>
         </div>
       </Link>
@@ -127,7 +197,14 @@ function Navbar() {
         onClick={() => setArPageName("المعجنات")}
       >
         <div className={styles.item}>
-          <Image priority src={crosvg} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={crosvg}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>المعجنات</p>
         </div>
       </Link>
@@ -137,7 +214,14 @@ function Navbar() {
         onClick={() => setArPageName("الاراكيل")}
       >
         <div className={styles.item}>
-          <Image priority src={hookah} alt="coffee" width={19} height={19} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src={hookah}
+            alt="coffee"
+            width={19}
+            height={19}
+          />
           <p>الاراكيل</p>
         </div>
       </Link>

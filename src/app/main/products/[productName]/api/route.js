@@ -12,7 +12,6 @@ export async function GET(_request, { params }) {
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
   });
-
   return new Response(JSON.stringify(items), {
     headers,
     status: 200,

@@ -31,7 +31,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image src={drink} alt="coffee" width={45} height={45} priority/>
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  src={drink}
+                  alt="coffee"
+                  width={45}
+                  height={45}
+                  priority
+                />
               </span>
               <p>العصائر الطبيعية</p>
             </div>
@@ -42,7 +49,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={FiCoffee} alt="coffee" width={45} height={45} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={FiCoffee}
+                  alt="coffee"
+                  width={45}
+                  height={45}
+                />
               </span>
               <p>المشروبات الساخنة</p>
             </div>
@@ -54,7 +68,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={mojito} alt="coffee" width={45} height={45} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={mojito}
+                  alt="coffee"
+                  width={45}
+                  height={45}
+                />
               </span>
               <p>كلاسك موهيتو</p>
             </div>
@@ -65,7 +86,9 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
                   src={cooldownMojito}
                   alt="coffee"
                   width={45}
@@ -81,7 +104,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={smoothie} alt="coffee" width={45} height={45} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={smoothie}
+                  alt="coffee"
+                  width={45}
+                  height={45}
+                />
               </span>
               <p>السموذيات</p>
             </div>
@@ -93,7 +123,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={icedrink} alt="coffee" width={45} height={45} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={icedrink}
+                  alt="coffee"
+                  width={45}
+                  height={45}
+                />
               </span>
               <p>المشروبات الباردة</p>
             </div>
@@ -105,7 +142,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={milkshake} alt="coffee" width={45} height={45} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={milkshake}
+                  alt="coffee"
+                  width={45}
+                  height={45}
+                />
               </span>
               <p>ميلك شيك</p>
             </div>
@@ -116,7 +160,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={yogurt} alt="coffee" width={40} height={40} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={yogurt}
+                  alt="coffee"
+                  width={40}
+                  height={40}
+                />
               </span>
               <p>يوكرت شيك</p>
             </div>
@@ -128,7 +179,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={iceCoffee} alt="coffee" width={40} height={40} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={iceCoffee}
+                  alt="coffee"
+                  width={40}
+                  height={40}
+                />
               </span>
               <p>القهوة المثلجة</p>
             </div>
@@ -140,7 +198,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={fraptchino} alt="coffee" width={45} height={45} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={fraptchino}
+                  alt="coffee"
+                  width={45}
+                  height={45}
+                />
               </span>
               <p>فرابتشينو</p>
             </div>
@@ -152,7 +217,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={crosvg} alt="cro" width={45} height={45} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={crosvg}
+                  alt="cro"
+                  width={45}
+                  height={45}
+                />
               </span>
               <p>المعجنات</p>
             </div>
@@ -163,7 +235,14 @@ function Categories() {
           >
             <div className={styles.item}>
               <span>
-                <Image priority src={hookah} alt="cro" width={45} height={45} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={hookah}
+                  alt="cro"
+                  width={45}
+                  height={45}
+                />
               </span>
               <p>الاراكيل</p>
             </div>

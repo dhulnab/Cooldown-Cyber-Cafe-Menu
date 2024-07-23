@@ -75,6 +75,7 @@ const RatingForm = () => {
         <Container>
           <div className={styles.logo}>
             <Image
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
               src="/logo.png"
               alt="logo"
@@ -100,6 +101,7 @@ const RatingForm = () => {
           <Container>
             <div className={styles.logo}>
               <Image
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
                 src="/logo.png"
                 alt="logo"
@@ -114,7 +116,14 @@ const RatingForm = () => {
             </div>
             {error ? (
               <div className={styles.error}>
-                <Image priority src={er} alt="error" width={100} height={100} />
+                <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  src={er}
+                  alt="error"
+                  width={100}
+                  height={100}
+                />
                 <p>!.. لقد حدث خطأ ما </p>
               </div>
             ) : (
