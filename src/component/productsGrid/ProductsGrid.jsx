@@ -7,7 +7,7 @@ const fetchProducts = async (productName) => {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/${productName}/api`,
-      { next: { revalidate: 1 } }
+      { next: { revalidate: 7200 } }
     );
     if (!response.ok) {
       throw new Error("Network response was not ok");
