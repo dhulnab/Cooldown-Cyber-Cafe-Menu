@@ -5,6 +5,10 @@ import Categories from "@/component/categories/Categories";
 import Banner from "@/component/banner/Banner";
 import PageNameRedetection from "@/component/PageNameRedetection";
 
+export const metadata = {
+  title: "الرئيسية",
+  description: "",
+};
 export default function Home() {
   return (
     <div className={styles.main}>
@@ -18,7 +22,7 @@ export default function Home() {
             مرحباً بك
           </p>
         </div>
-        <Banner/>
+        <Banner />
         <Categories />
       </Container>
     </div>

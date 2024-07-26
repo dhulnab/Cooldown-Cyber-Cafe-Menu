@@ -1,0 +1,27 @@
+.logo {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 25px;
+    direction: rtl;
+    margin-right: -28px;
+    color: #fff;
+    overflow: hidden;
+    margin-bottom: -10px;
+  
+  }
+  .logo p span {
+    font-weight: bold;
+  }
+  @media only screen and (max-width: 440px) {
+    .logo {
+      font-size: 16px;
+      margin-bottom: -18px;
+    }
+    .logo img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  

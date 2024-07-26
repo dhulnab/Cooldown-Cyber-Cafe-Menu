@@ -11,16 +11,22 @@ import Link from "next/link";
 import { useGlobalStates } from "@/globalState";
 
 function Header() {
-  const { page, setPage } = useGlobalStates();
+  const { page, setPage, setArPageName, setEntertainmentPage } =
+    useGlobalStates();
   useEffect(() => {}, [page]);
   return (
     <div className={styles.header}>
       <Container>
         <div className={styles.content}>
           <ul>
-            <Link href="/main" onClick={() => setPage("main")}>
+            <Link
+              href="/main"
+              onClick={() => {
+                setPage("main");
+              }}
+            >
               <li className={page === "main" ? styles.active : null}>
-                <p>الرئيسية</p>
+                <p>المنيو</p>
                 <Image
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
@@ -31,9 +37,16 @@ function Header() {
                 />
               </li>
             </Link>
-            <Link href="/main/gaming" onClick={() => setPage("gaming")}>
-              <li className={page === "gaming" ? styles.active : null}>
-                <p>گيمنگ</p>
+            <Link
+              href="/main/entertainment"
+              onClick={() => {
+                setPage("entertainment");
+                setArPageName("PC's");
+                setEntertainmentPage("PC");
+              }}
+            >
+              <li className={page === "entertainment" ? styles.active : null}>
+                <p>ترفية</p>
                 <Image
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
@@ -45,7 +58,12 @@ function Header() {
               </li>
             </Link>
 
-            <Link href="/main/aboutus" onClick={() => setPage("aboutus")}>
+            <Link
+              href="/main/aboutus"
+              onClick={() => {
+                setPage("aboutus");
+              }}
+            >
               <li className={page === "aboutus" ? styles.active : null}>
                 <p>من نحن</p>
                 <Image
@@ -59,7 +77,12 @@ function Header() {
               </li>
             </Link>
 
-            <Link href="/main/rating" onClick={() => setPage("rating")}>
+            <Link
+              href="/main/rating"
+              onClick={() => {
+                setPage("rating");
+              }}
+            >
               <li className={page === "rating" ? styles.active : null}>
                 <p>التقيم</p>
                 <Image

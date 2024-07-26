@@ -18,13 +18,15 @@ import Link from "next/link";
 import { useGlobalStates } from "@/globalState";
 
 function Navbar() {
-  const { arPageName, setArPageName } = useGlobalStates();
+  const { arPageName, setArPageName, setProductPage } = useGlobalStates();
   return (
     <div className={styles.nav}>
-      <Link
-        href={`/main/products/drinks`}
+      <div
         className={arPageName === "العصائر الطبيعية" ? styles.active : null}
-        onClick={() => setArPageName("العصائر الطبيعية")}
+        onClick={() => {
+          setProductPage("drinks");
+          setArPageName("العصائر الطبيعية");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -37,11 +39,13 @@ function Navbar() {
           />
           <p style={{ marginRight: "0px" }}>العصائر الطبيعية</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/hotdrinks`}
+      </div>
+      <div
         className={arPageName === "المشروبات الساخنة" ? styles.active : null}
-        onClick={() => setArPageName("المشروبات الساخنة")}
+        onClick={() => {
+          setProductPage("hotdrinks");
+          setArPageName("المشروبات الساخنة");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -54,11 +58,13 @@ function Navbar() {
           />
           <p>المشروبات الساخنة</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/mojito`}
+      </div>
+      <div
         className={arPageName === "كلاسك موهيتو" ? styles.active : null}
-        onClick={() => setArPageName("كلاسك موهيتو")}
+        onClick={() => {
+          setProductPage("mojito");
+          setArPageName("كلاسك موهيتو");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -71,11 +77,13 @@ function Navbar() {
           />
           <p>كلاسك موهيتو</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/cooldownMojito`}
+      </div>
+      <div
         className={arPageName === "كولداون موهيتو" ? styles.active : null}
-        onClick={() => setArPageName("كولداون موهيتو")}
+        onClick={() => {
+          setProductPage("cooldownMojito");
+          setArPageName("كولداون موهيتو");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -88,11 +96,13 @@ function Navbar() {
           />
           <p>كولداون موهيتو</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/smoothies`}
+      </div>
+      <div
         className={arPageName === "السموذيات" ? styles.active : null}
-        onClick={() => setArPageName("السموذيات")}
+        onClick={() => {
+          setProductPage("smoothies");
+          setArPageName("السموذيات");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -105,11 +115,13 @@ function Navbar() {
           />
           <p>السموذيات</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/icedrinks`}
+      </div>
+      <div
         className={arPageName === "المشروبات الباردة" ? styles.active : null}
-        onClick={() => setArPageName("المشروبات الباردة")}
+        onClick={() => {
+          setProductPage("icedrinks");
+          setArPageName("المشروبات الباردة");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -122,11 +134,13 @@ function Navbar() {
           />
           <p>المشروبات الباردة</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/milkshake`}
+      </div>
+      <div
         className={arPageName === "ميلك شيك" ? styles.active : null}
-        onClick={() => setArPageName("ميلك شيك")}
+        onClick={() => {
+          setProductPage("milkshake");
+          setArPageName("ميلك شيك");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -139,11 +153,13 @@ function Navbar() {
           />
           <p>ميلك شيك</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/yogurtShake`}
+      </div>
+      <div
         className={arPageName === "يوكرت شيك" ? styles.active : null}
-        onClick={() => setArPageName("يوكرت شيك")}
+        onClick={() => {
+          setProductPage("yogurtShake");
+          setArPageName("يوكرت شيك");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -156,11 +172,13 @@ function Navbar() {
           />
           <p>يوكرت شيك</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/icecoffee`}
+      </div>
+      <div
         className={arPageName === "القهوة المثلجة" ? styles.active : null}
-        onClick={() => setArPageName("القهوة المثلجة")}
+        onClick={() => {
+          setProductPage("icecoffee");
+          setArPageName("القهوة المثلجة");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -173,11 +191,13 @@ function Navbar() {
           />
           <p>القهوة المثلجة</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/fraptchino`}
+      </div>
+      <div
         className={arPageName === "فرابتشينو" ? styles.active : null}
-        onClick={() => setArPageName("فرابتشينو")}
+        onClick={() => {
+          setProductPage("fraptchino");
+          setArPageName("فرابتشينو");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -190,11 +210,13 @@ function Navbar() {
           />
           <p>فرابتشينو</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/pastries`}
+      </div>
+      <div
         className={arPageName === "المعجنات" ? styles.active : null}
-        onClick={() => setArPageName("المعجنات")}
+        onClick={() => {
+          setProductPage("pastries");
+          setArPageName("المعجنات");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -207,11 +229,13 @@ function Navbar() {
           />
           <p>المعجنات</p>
         </div>
-      </Link>
-      <Link
-        href={`/main/products/hookah`}
+      </div>
+      <div
         className={arPageName === "الاراكيل" ? styles.active : null}
-        onClick={() => setArPageName("الاراكيل")}
+        onClick={() => {
+          setProductPage("hookah");
+          setArPageName("الاراكيل");
+        }}
       >
         <div className={styles.item}>
           <Image
@@ -224,7 +248,7 @@ function Navbar() {
           />
           <p>الاراكيل</p>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

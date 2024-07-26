@@ -6,10 +6,9 @@ import Image from "next/image";
 
 const fetchOffers = async () => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/offers/api`,
-      { next: { revalidate: 7200 } }
-    );
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api`, {
+      next: { revalidate: 10 },
+    });
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -32,8 +31,8 @@ const Banner = async () => {
         {offers.map((offer) => (
           <div className={styles.banner} key={offer.id}>
             <Image
-              src={`${offer.productImg}image.jpg`}
-              alt={offer.productName}
+              src={`${offer.img}image.jpg`}
+              alt={offer.name}
               fill
               priority
               className={styles.slide}

@@ -1,10 +1,13 @@
 import { PrismaClient } from "@prisma/client";
-
 const db = new PrismaClient();
-
-export async function GET(_request, { params }) {
+export async function GET() {
+  const excludedCategories = ["offer", "entertainment"];
   const items = await db.product.findMany({
-    where: { productCategory: params.productName },
+    where: {
+      category: {
+        notIn: excludedCategories,
+      },
+    },
   });
 
   const headers = new Headers({

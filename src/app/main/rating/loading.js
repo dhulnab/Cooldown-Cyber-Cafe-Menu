@@ -9,20 +9,23 @@ const Loading = () => {
   return (
     <div>
       <Container style={{ minHeight: "90vh" }}>
-        <div className={styles.logo}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            minHeight: "75vh",
+          }}
+        >
           <Image src="/logo.png" alt="logo" width={100} height={100} />
-          <p>
-            <span>COOLDOWN</span>
-            <br />
-            اخبرنا عن تجربتك
-          </p>
-        </div>
-        <div className="loading">
-          <Spin
-            indicator={<LoadingOutlined spin />}
-            size="large"
-            style={{ color: "#a247dc" }}
-          />
+          <div className="loading">
+            <Spin
+              indicator={<LoadingOutlined spin />}
+              size="large"
+              style={{ color: "#a247dc" }}
+            />
+          </div>
         </div>
       </Container>
     </div>

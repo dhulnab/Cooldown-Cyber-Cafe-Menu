@@ -1,37 +1,39 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState, useCallback } from "react";
 import styles from "./ProductsGrid.module.css";
 import Container from "../container/Container";
 import Image from "next/image";
+import { useGlobalStates } from "@/globalState";
 
-const fetchProducts = async (productName) => {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/${productName}/api`,
-      { next: { revalidate: 7200 } }
-    );
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
+const ProductsGrid = ({ items = [], entertainment = [] }) => {
+  const { productPage, entertainmentPage } = useGlobalStates();
+  const [products, setProducts] = useState([]);
+
+  const updateProducts = useCallback(() => {
+    if (productPage && items.length > 0) {
+      return items.filter((item) => item.category === productPage);
+    } else if (entertainmentPage && entertainment.length > 0) {
+      return entertainment.filter(
+        (item) => item.supCategory === entertainmentPage
+      );
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
     return [];
-  }
-};
+  }, [productPage, entertainmentPage]);
 
-const ProductsGrid = async ({ productName }) => {
-  const items = await fetchProducts(productName);
+  useEffect(() => {
+    const filteredProducts = updateProducts();
+    setProducts(filteredProducts);
+  }, [updateProducts]);
 
   return (
     <Container>
       <div className={styles.grid}>
-        {items.map((item) => (
-          <div className={styles.item} key={item.id}>
+        {products.map((product) => (
+          <div className={styles.item} key={product.id}>
             <div className={styles.imgBox}>
               <Image
-                src={`${item.productImg}image.jpg`}
-                alt={item.productName}
+                src={`${product.img}image.jpg`}
+                alt={product.name}
                 fill
                 className={styles.img}
                 priority
@@ -39,8 +41,8 @@ const ProductsGrid = async ({ productName }) => {
               />
             </div>
             <div className={styles.content}>
-              <p className={styles.name}>{item.productName}</p>
-              <p className={styles.price}>{item.productPrice} IQD</p>
+              <p className={styles.name}>{product.name}</p>
+              <p className={styles.price}>{product.price} IQD</p>
             </div>
           </div>
         ))}

@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import PageNameRedetection from "@/component/PageNameRedetection";
 
 export const metadata = {
-  title: "Rating",
+  title: "التقييم",
   description: "",
 };
 

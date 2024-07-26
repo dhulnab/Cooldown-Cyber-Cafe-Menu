@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { useGlobalStates } from "@/globalState"; // Ensure this import path is correct
+import { useGlobalStates } from "@/globalState"; 
 
 const PageNameRedetection = () => {
   const { setPage, page } = useGlobalStates();
