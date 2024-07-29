@@ -1,5 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const db = new PrismaClient();
+
+export const dynamic = "force-dynamic";
 export async function GET() {
   const excludedCategories = ["offer", "entertainment"];
   const items = await db.product.findMany({
