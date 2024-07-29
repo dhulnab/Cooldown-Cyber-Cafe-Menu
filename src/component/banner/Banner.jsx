@@ -6,9 +6,7 @@ import Image from "next/image";
 
 const fetchOffers = async () => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api`, {
-      next: { revalidate: 10 },
-    });
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api`);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }

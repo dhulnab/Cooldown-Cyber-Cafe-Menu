@@ -12,7 +12,7 @@ const fetchProducts = async () => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}main/entertainment/api`,
       {
-        next: { revalidate: 10 },
+        next: { revalidate: 7200 },
       }
     );
     if (!response.ok) {

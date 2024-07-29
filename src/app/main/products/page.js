@@ -10,7 +10,7 @@ export const metadata = {
 const fetchProducts = async () => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}main/products/api`, {
-      next: { revalidate: 10 },
+      next: { revalidate: 7200 },
     });
     if (!response.ok) {
       throw new Error("Network response was not ok");
