@@ -106,7 +106,7 @@ export default function EntertainmentNavbar() {
             width={23}
             height={23}
           />
-          <p style={{ marginRight: "8px" }}>الواقع الافتراضي</p>
+          <p style={{ marginRight: "8px" }}>VR</p>
         </div>
       </div>
     </div>

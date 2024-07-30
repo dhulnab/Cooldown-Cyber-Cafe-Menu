@@ -15,7 +15,14 @@ export default function Home() {
       <Container>
         <PageNameRedetection />
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="logo" width={100} height={100} />
+          <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority
+            src="/logo.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
           <p>
             <span>COOLDOWN</span>
             <br />
